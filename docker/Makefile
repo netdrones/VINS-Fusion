@@ -10,7 +10,7 @@ help:
 	@echo ""
 
 build:
-	@docker build --tag ros:vins-fusion -f ./Dockerfile ..
+	@docker build --tag ghcr.io/netdrones/vins-fusion:latest -f ./Dockerfile ..
 
 clean:
-	@docker rmi -f ros:vins-fusion
+	@docker rmi -f ghcr.io/netdrones/vins-fusion:latest

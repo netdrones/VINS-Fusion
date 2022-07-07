@@ -10,7 +10,7 @@ function echoUsage()
             \t -h help" >&2
 }
 
-function absPath() 
+function absPath()
 {
     # generate absolute path from relative path
     # $1     : relative filename
@@ -123,7 +123,7 @@ if [ $KITTI -eq 0 ]; then
         --rm \
         --net=host \
         -v ${VINS_FUSION_DIR}:/root/catkin_ws/src/VINS-Fusion/ \
-        ros:vins-fusion \
+        ghcr.io/netdrones/vins-fusion \
         /bin/bash -c \
         "cd /root/catkin_ws/; \
         catkin config \
@@ -140,7 +140,7 @@ if [ $KITTI -eq 0 ]; then
         --rm \
         --net=host \
         -v ${VINS_FUSION_DIR}:/root/catkin_ws/src/VINS-Fusion/ \
-        ros:vins-fusion \
+        ghcr.io/netdrones/vins-fusion \
         /bin/bash -c \
         "cd /root/catkin_ws/; \
         catkin config \
@@ -161,7 +161,7 @@ else
         --net=host \
         -v ${VINS_FUSION_DIR}:/root/catkin_ws/src/VINS-Fusion/ \
         -v ${KITTI_DATASET}:/root/kitti_dataset/ \
-        ros:vins-fusion \
+        ghcr.io/netdrones/vins-fusion \
         /bin/bash -c \
         "cd /root/catkin_ws/; \
         catkin config \
@@ -180,7 +180,7 @@ else
         --net=host \
         -v ${VINS_FUSION_DIR}:/root/catkin_ws/src/VINS-Fusion/ \
         -v ${KITTI_DATASET}:/root/kitti_dataset/ \
-        ros:vins-fusion \
+        ghcr.io/netdrones/vins-fusion \
         /bin/bash -c \
         "cd /root/catkin_ws/; \
         catkin config \
@@ -199,7 +199,7 @@ else
         --net=host \
         -v ${VINS_FUSION_DIR}:/root/catkin_ws/src/VINS-Fusion/ \
         -v ${KITTI_DATASET}:/root/kitti_dataset/ \
-        ros:vins-fusion \
+        ghcr.io/netdrones/vins-fusion \
         /bin/bash -c \
         "cd /root/catkin_ws/; \
         catkin config \
